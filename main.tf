@@ -4,6 +4,11 @@ provider "google" {
   region      = "us-central1"  # Choose your preferred region
 }
 
+variable "google_credentials_json" {
+  description = "Google Cloud Service Account JSON credentials"
+  type        = string
+}
+
 resource "google_compute_instance" "my_instance" {
   name         = "my-instance"
   machine_type = "e2-micro"
