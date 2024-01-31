@@ -1,4 +1,5 @@
 provider "google" {
+  credentials = jsondecode(var.google_credentials_json)
   project = "learningtf-412916"
   region  = "us-central1"
 }
