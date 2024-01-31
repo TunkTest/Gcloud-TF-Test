@@ -1,13 +1,13 @@
 provider "google" {
-  credentials = jsondecode(var.GOOGLE_CREDENTIALS_JSON)
-  project = "learningtf-412916"
-  region  = "us-central1"
+  credentials = jsondecode(var.google_credentials_json)
+  project     = "learningtf-412916"
+  region      = "us-central1"  # Choose your preferred region
 }
 
-resource "google_compute_instance" "example_instance" {
-  name         = "MyTestInstance"
+resource "google_compute_instance" "my_instance" {
+  name         = "my-instance"
   machine_type = "e2-micro"
-  zone         = "us-central1-a"  # Change this to your preferred zone
+  zone         = "us-central1-a"  # Choose your preferred zone
 
   boot_disk {
     initialize_params {
